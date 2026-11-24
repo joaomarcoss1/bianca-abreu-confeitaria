@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bianca Abreu Confeitaria</title>
+<meta name="description" content="Confeitaria artesanal em Codó - MA. Bolos vulcão, copos da felicidade, fatias supreme e bombons. Peça online com retirada na loja ou delivery, entrega grátis a partir de R$ 30.">
+<meta name="theme-color" content="#f4bfcb">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bianca Abreu Confeitaria · Codó - MA">
+<meta property="og:description" content="Com sabor e amor em cada mordida. Peça online: retirada na loja ou delivery em 33 bairros de Codó.">
+<meta property="og:image" content="img/bianca1.webp">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="img/logo.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Bakery","name":"Bianca Abreu Confeitaria","image":"img/bianca1.webp","telephone":"+55 99 98120-7545","priceRange":"R$ 20–40","servesCuisine":"Doces e sobremesas","address":{"@type":"PostalAddress","streetAddress":"Av. Augusto Teixeira, 2556 - R. São Sebastião","addressLocality":"Codó","addressRegion":"MA","postalCode":"65400-000","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-4.4588131,"longitude":-43.8883388},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Saturday"],"opens":"13:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"13:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"13:00","closes":"18:30"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"54"},"sameAs":["https://www.instagram.com/biancaabreuconfeitaria","https://www.facebook.com/biancaabreuconfeitaria"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+/* VOICE: carinhoso, artesanal e premium — vitrine de confeitaria fina
+   IDEA: a caixa de presente rosa da confeitaria, com o monograma B e laço de cacau
+   PICTURE: bolo vulcão em moldura arqueada, docinhos flutuando, selo girando
+   COLOUR and TYPE: rosa da marca dominante, cacau de apoio, morango como acento; Fraunces + Manrope, script só na assinatura
+   LAYOUT: três telas (início, cardápio, painel) navegadas por #hash, faixas de cor de ponta a ponta */
+:root{color-scheme:light dark;
+--bg:light-dark(#fff9f7,#1d120d);--card:light-dark(#ffffff,#2a1b14);--soft:light-dark(#fdebef,#33211a);
+--rose:light-dark(#f4bfcb,#4a2c2b);--rose2:light-dark(#eaa3b4,#6b3c40);--ink:light-dark(#3a2418,#fbe7ec);--mute:light-dark(#735446,#d2b6ae);
+--cocoa:#5b3a26;--btn:light-dark(#5b3a26,#f4bfcb);--btnInk:light-dark(#fff4f6,#2a1712);--red:light-dark(#b3123a,#ff7f97);--cocoa2:#3a2418;--on:#fff4f6;--berry:light-dark(#b3123a,#ff7f97);--line:light-dark(#efdcd6,#3e2a22);--ok:#2f8f5b;
+--sh:0 18px 40px -22px rgba(58,36,24,.45);--r:22px}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.05;margin:0;text-wrap:balance;font-weight:600}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--berry);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(5vw,16px)}
+.band{padding:clamp(48px,7vw,96px) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;border:0;background:var(--btn);color:var(--btnInk);font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.light{background:var(--card);color:var(--ink)}
+.btn.berry{background:var(--berry);color:#fff}
+.btn.sm{min-height:40px;padding:0 16px;font-size:14px}
+.ico{width:20px;height:20px;flex:none}
+.eyb{font-family:'Pinyon Script',cursive;font-size:30px;color:var(--berry);line-height:1.1;margin-bottom:6px}
+.mute{color:var(--mute)}
+.hide{display:none!important}
+/* header */
+header{position:sticky;top:0;z-index:40;transition:box-shadow .3s,background .3s;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:20px;min-height:72px}
+header.sc{box-shadow:0 10px 30px -18px rgba(58,36,24,.45)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo{width:48px;height:48px;border-radius:14px;background:#f2b6c3;overflow:hidden;display:grid;place-items:center;flex:none;position:relative}
+.logo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.logo b{font:700 13px/1 Fraunces,serif;color:#3a2418;text-align:center}
+.brand span{font:600 19px/1.1 Fraunces,serif}.brand small{display:block;font:600 11px Manrope;color:var(--mute);letter-spacing:.02em}
+.links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.links a{padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+.links a:hover,.links a.on{background:var(--soft)}
+.status{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--soft)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 25%,transparent)}
+.status.off i{background:#b54;box-shadow:none}
+.cartbtn{position:relative}
+.cartbtn em{position:absolute;top:-4px;right:-4px;min-width:22px;height:22px;border-radius:11px;background:var(--berry);color:#fff;font:800 12px/22px Manrope;font-style:normal;text-align:center;padding:0 5px}
+/* hero */
+.hero{background:radial-gradient(60% 70% at 78% 40%,light-dark(#fbe1e8,#5a3436) 0%,transparent 70%),radial-gradient(40% 50% at 8% 90%,light-dark(#f7cfd9,#432826) 0%,transparent 70%),var(--rose);position:relative;overflow:hidden}
+.pattern{position:absolute;inset:0;width:100%;height:100%;opacity:.06;color:var(--cocoa);pointer-events:none}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);grid-template-areas:'top pic' 'body pic';column-gap:clamp(28px,5vw,80px);row-gap:22px;align-items:center;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(56px,7vw,96px);position:relative}
+.htop{grid-area:top;align-self:end}.hbody{grid-area:body;align-self:start}.stage{grid-area:pic}
+.hero h1{font-size:clamp(34px,4.6vw,58px);color:var(--ink);margin:0;letter-spacing:-.01em}
+.tagline{font-family:'Pinyon Script',cursive;font-size:clamp(28px,3vw,38px);line-height:1.2;color:var(--red);margin:0 0 8px;animation:rise 1s ease-out both}
+.tagline span{display:inline}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}}
+.proof{display:grid;grid-template-columns:repeat(3,max-content);gap:10px;margin:0 0 26px;font-weight:600;font-size:13px;color:var(--ink)}.proof>span{display:flex;flex-direction:column;gap:2px;padding:9px 14px;border-radius:16px;background:color-mix(in srgb,var(--card) 65%,transparent);backdrop-filter:blur(6px)}
+.proof b{font:600 20px/1.1 Fraunces,serif;white-space:nowrap}.proof .star{font-size:12px;letter-spacing:1px}.star{color:#e0a100}
+.promo{background:var(--cocoa2);color:#f7c6d2;text-align:center;padding:12px 16px;font-weight:700;font-size:14px;letter-spacing:.01em}
+.hours{width:100%;border-collapse:collapse;font-size:15px}.hours td{padding:7px 0;border-bottom:1px dashed var(--line)}.hours td:last-child{text-align:right;white-space:nowrap}.hours tr.today td{font-weight:800;color:var(--red)}
+.who{display:flex;gap:16px;align-items:center;margin:18px 0 6px}.who .media img{object-position:50% 15%}.who .media{width:84px;height:84px;border-radius:50%;flex:none;border:4px solid var(--card);box-shadow:var(--sh)}.who .media::before{font-size:34px}
+.cap{position:absolute;left:12px;bottom:12px;z-index:2;background:rgba(255,255,255,.92);color:#3a2418;font-weight:800;font-size:13px;padding:6px 12px;border-radius:999px}
+.extra{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px}
+.extra a{display:block;transition:transform .25s,box-shadow .25s;text-decoration:none;background:var(--card);border-radius:18px;padding:18px;border:1px solid var(--line)}.extra a:hover{box-shadow:var(--sh);transform:translateY(-3px)}
+.extra b{display:block;font:600 19px Fraunces,serif;margin-bottom:4px}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.gal .media{aspect-ratio:4/5;border-radius:var(--r)}.gal .media img{object-position:50% 20%}.gal .media:hover img{transform:scale(1.05)}.gal .media{box-shadow:0 24px 50px -30px rgba(58,36,24,.55)}
+@media(max-width:700px){.gal{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory}.gal .media{scroll-snap-align:start}}
+
+.reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.reel{position:relative;display:block;border-radius:20px;overflow:hidden;text-decoration:none;box-shadow:0 24px 50px -30px rgba(58,36,24,.6)}
+.reel .media{aspect-ratio:9/16}.reel:hover img{transform:scale(1.05)}
+.reel::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(30,16,10,.75))}
+.play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.9);color:#5b3a26;display:grid;place-items:center;transition:transform .25s}.play svg{width:26px;height:26px;margin-left:3px}.reel:hover .play{transform:translate(-50%,-50%) scale(1.1)}
+.views{position:absolute;left:14px;bottom:14px;z-index:2;color:#fff;font-weight:800;font-size:14px}
+.revs-band{background:var(--soft)}
+.rvhead{display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;margin-bottom:28px}
+.rvhead h2{font-size:clamp(30px,4vw,44px)}
+.rvscore{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px 22px}.rvscore b{font:600 46px/1 Fraunces,serif}.rvscore div{display:flex;flex-direction:column;font-size:13px;font-weight:700;color:var(--mute)}
+.stars{color:#e0a100;letter-spacing:2px;font-size:15px}
+.rvgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rv{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.rv blockquote{margin:0;font-size:16px;line-height:1.55}.rv figcaption{margin-top:auto;font-weight:800;font-size:14px}.rv figcaption span{font-weight:600;color:var(--mute)}
+.wafloat{position:fixed;right:18px;bottom:18px;z-index:44;width:58px;height:58px;border-radius:50%;background:#1f9e57;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .2s}.wafloat:hover{transform:scale(1.08)}.wafloat svg{width:30px;height:30px}
+.pix{background:var(--soft);border-radius:18px;padding:16px;margin-top:16px;text-align:center}.pix canvas,.pix img{margin:10px auto;display:block;background:#fff;padding:8px;border-radius:10px}.pix textarea{font-size:12px;min-height:70px}
+.mi .media.pack img,.pc .media.pack img{object-fit:contain;padding:12%;background:#fff}
+@media(max-width:900px){.reels{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:46%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.reel{scroll-snap-align:start}.rvgrid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}.rv{scroll-snap-align:start}}
+@media(max-width:600px){.reels{grid-auto-columns:62%}.rvscore b{font-size:38px}}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.fslot{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.fslot .media{aspect-ratio:1}.fslot div.t{padding:8px 10px;font-size:13px;font-weight:700}
+.fslot label{display:block;margin:0 10px 10px;text-align:center;font-size:13px;font-weight:800;padding:8px;border-radius:999px;background:var(--soft);cursor:pointer}
+.fslot input{display:none}
+.hero p.lead{font-size:17.5px;max-width:33em;margin:0 0 22px;color:color-mix(in srgb,var(--ink) 85%,transparent)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:color-mix(in srgb,var(--card) 70%,transparent);font-weight:600;font-size:14px}
+.stage{position:relative;aspect-ratio:1/1.08;max-width:520px;width:100%;justify-self:center}
+.arch img{object-position:50% 20%}.arch{position:absolute;inset:4% 10% 0 6%;border-radius:999px 999px 34px 34px;overflow:hidden;background:var(--rose2);box-shadow:0 40px 80px -40px rgba(58,36,24,.6);border:8px solid var(--card)}
+.media{position:relative;background:radial-gradient(circle at 30% 25%,#ffe3ea,#f0a9ba 60%,#d98ea2);overflow:hidden}
+.media::before{content:"B";position:absolute;inset:0;display:grid;place-items:center;font:700 clamp(34px,8vw,90px)/1 Fraunces,serif;color:rgba(91,58,38,.28)}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.arch.media{position:absolute}
+.float{position:absolute;width:30%;aspect-ratio:1;border-radius:50%;border:6px solid var(--card);box-shadow:var(--sh);animation:bob 6s ease-in-out infinite}
+.f1{right:0;top:10%}.f2{left:-2%;bottom:8%;animation-delay:-3s;width:26%}
+.seal{position:absolute;right:4%;bottom:2%;width:31%;aspect-ratio:1;border-radius:50%;background:var(--cocoa);color:var(--on);display:grid;place-items:center;box-shadow:var(--sh)}
+.seal svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 18s linear infinite}
+.seal b{font:600 clamp(16px,2.2vw,24px)/1 Fraunces,serif;text-align:center}
+@keyframes bob{50%{transform:translateY(-14px)}}@keyframes spin{to{transform:rotate(360deg)}}
+.marq{background:var(--cocoa);border-top:1px solid rgba(255,255,255,.08);color:var(--on);overflow:hidden;white-space:nowrap;padding:16px 0;font:500 22px Fraunces,serif}
+.marq div{display:inline-block;animation:mq 38s linear infinite}
+.marq span{margin:0 18px}.marq span:nth-child(even){color:#f4bfcb}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* sections */
+.shead{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:32px}
+.shead h2{font-size:clamp(32px,4.2vw,48px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.pc{background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 40px -30px rgba(58,36,24,.5);display:flex;flex-direction:column;cursor:pointer;transition:transform .25s}
+.pc:hover{transform:translateY(-4px)}.pc:hover img{transform:scale(1.06)}
+.pc .media{aspect-ratio:1/.86}
+.pc .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pc h3{font-size:20px;font-weight:600}
+.pc p{margin:0;font-size:14px;color:var(--mute);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pc .ft{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px}
+.price{font:700 19px Manrope;white-space:nowrap}
+.add{width:44px;height:44px;border-radius:50%;border:0;background:var(--cocoa);color:#fff;font-size:24px;line-height:1;display:grid;place-items:center;transition:transform .2s,background .2s}.add:hover{background:var(--red);transform:rotate(90deg)}
+.gift .add{background:#f7c6d2;color:#3a2418}
+.tag{position:absolute;left:12px;top:12px;z-index:2;background:var(--cocoa);color:var(--on);font-size:12px;font-weight:800;padding:5px 10px;border-radius:999px}
+.pc.out{opacity:.62}.pc.out .add{background:var(--mute)}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.mosaic{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mosaic .media{border-radius:var(--r);aspect-ratio:1;box-shadow:0 24px 50px -30px rgba(58,36,24,.55)}
+.mosaic .media:first-child{grid-row:span 2;aspect-ratio:auto}
+.about p{font-size:17px;max-width:36em;color:color-mix(in srgb,var(--ink) 85%,transparent)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:28px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:transform .25s}.step:hover{transform:translateY(-4px)}
+.step b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--cocoa);color:var(--on);font:600 18px Fraunces,serif;margin-bottom:12px}
+.step h3{font-size:20px;margin-bottom:6px}.step p{margin:0;color:var(--mute);font-size:15px}
+.gift{background:var(--cocoa);color:var(--on)}
+.gift .eyb{color:#f7c6d2}.gift h2{color:#fff}.gift .mute{color:#e7cfc6}
+.gift .pc{background:#4a2f20;color:var(--on);box-shadow:none;border-color:rgba(255,255,255,.08)}.gift .pc p{color:#e7cfc6}
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.vcard{background:var(--card);border-radius:var(--r);padding:clamp(22px,3vw,36px);box-shadow:var(--sh)}
+.vcard h3{font-size:28px;margin-bottom:12px}
+.line{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line)}
+.line:first-of-type{border-top:0}
+.mapart{border-radius:var(--r);overflow:hidden;min-height:300px;position:relative;background:var(--rose)}
+.mapart svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .6s}.mapart:hover svg{transform:scale(1.04)}.maptag{position:absolute;left:20px;bottom:20px;background:var(--cocoa);color:#fff;font-weight:800;font-size:14px;padding:12px 18px;border-radius:999px;box-shadow:var(--sh)}.mapart{text-decoration:none;box-shadow:var(--sh)}
+footer{background:var(--cocoa2);color:#f3dcd4;padding:56px 0 40px}
+footer .fgrid2{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:32px}footer h4{font:600 18px Fraunces,serif;color:#fff;margin:0 0 10px}footer p{margin:0 0 10px;font-size:14px;line-height:1.8}.fbrand{font:600 26px Fraunces,serif;color:#fff}.fsig{font-family:'Pinyon Script',cursive;font-size:26px!important;color:#f7c6d2;margin:4px 0 12px!important}.fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:28px;padding-top:18px;font-size:13px;opacity:.7}footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+@media(max-width:800px){footer .fgrid2{grid-template-columns:1fr}}
+footer a{color:#fff}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.reveal.shown{opacity:1;transform:none}
+/* menu view */
+.mhero{background:var(--rose);padding:32px 0 26px;position:relative;overflow:hidden}
+.mhero .wrap{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;position:relative}
+.mhero h1{font-size:clamp(34px,5vw,54px)}
+.search{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:999px;padding:0 18px;min-height:52px;width:min(420px,100%);box-shadow:var(--sh)}
+.search input{border:0;background:none;outline:0;width:100%;font-size:16px;min-height:50px}
+.tabs{position:sticky;top:72px;z-index:30;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:8px;overflow-x:auto;padding-top:12px;padding-bottom:12px;scrollbar-width:none}
+.tabs a{flex:none;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;background:var(--soft);white-space:nowrap}
+.tabs a.on{background:var(--cocoa);color:var(--on)}
+.cat{padding-top:36px}
+.cat h2{font-size:30px;margin-bottom:18px;display:flex;align-items:baseline;gap:12px}
+.cat h2 small{font:600 14px Manrope;color:var(--mute)}
+.mlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:16px}
+.mi{display:grid;grid-template-columns:minmax(0,1fr) 128px;gap:14px;background:var(--card);border-radius:20px;overflow:hidden;box-shadow:0 1px 0 var(--line);cursor:pointer;transition:box-shadow .2s,transform .2s;border:1px solid var(--line)}
+.mi:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.mi .bd{padding:16px 0 16px 18px;display:flex;flex-direction:column;gap:4px}
+.mi h3{font:700 17px Manrope}
+.mi p{margin:0;font-size:14px;color:var(--mute);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mi .price{margin-top:auto;padding-top:6px;font-size:17px}
+.mi .media{height:100%;min-height:128px}
+.mi.out{opacity:.6}
+.empty{padding:60px 0;text-align:center;color:var(--mute)}
+.fab{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:45;box-shadow:0 18px 40px -12px rgba(58,36,24,.6);min-height:56px;padding:0 26px;font-size:16px}
+/* drawers & modals */
+.scrim{position:fixed;inset:0;background:rgba(30,16,10,.5);z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(460px,100%);background:var(--bg);z-index:70;transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dh h2{font-size:26px}
+.x{width:44px;height:44px;border-radius:50%;border:0;background:var(--soft);font-size:22px}
+.db{flex:1;overflow:auto;padding:18px 22px}
+.df{padding:18px 22px;border-top:1px solid var(--line);background:var(--card)}
+.ci{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ci .media{width:64px;height:64px;border-radius:14px}
+.ci b{display:block;font-size:15px}.ci small{color:var(--mute)}
+.qty{display:inline-flex;align-items:center;border-radius:999px;background:var(--soft)}
+.qty button{width:40px;height:40px;border:0;background:none;font-size:20px;font-weight:700}
+.qty span{min-width:24px;text-align:center;font-weight:800}
+.tot{display:flex;justify-content:space-between;font-weight:600;margin:4px 0}
+.tot.big{font:700 22px Fraunces,serif;margin:8px 0 14px}
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;pointer-events:none}
+.modal .box{background:var(--bg);border-radius:28px;width:min(560px,100%);max-height:92vh;overflow:auto;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);opacity:0;transform:translateY(24px) scale(.98);transition:.3s;pointer-events:none}
+.modal.on .box{opacity:1;transform:none;pointer-events:auto}
+.modal .media{aspect-ratio:16/11}
+.pm{padding:22px 24px 24px}
+.pm h2{font-size:30px;margin-bottom:8px}
+label.f{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+.in{width:100%;min-height:48px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);padding:10px 14px;font-size:16px}
+textarea.in{min-height:84px;resize:vertical}
+.seg{display:flex;gap:8px;flex-wrap:wrap}
+.seg label{flex:1 1 120px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);font-weight:700;cursor:pointer;padding:0 12px;text-align:center}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){border-color:var(--cocoa);background:var(--soft);box-shadow:inset 0 0 0 1px var(--cocoa)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.note{font-size:13px;color:var(--mute);margin:8px 0 0}
+.done{text-align:center;padding:28px 24px}
+.done .ok{width:76px;height:76px;border-radius:50%;background:var(--ok);color:#fff;display:grid;place-items:center;margin:0 auto 16px;font-size:38px;animation:pop .5s}
+@keyframes pop{0%{transform:scale(.3)}70%{transform:scale(1.1)}}
+/* receipt */
+.rcpt{font:13px/1.45 'Courier New',monospace;color:#111;background:#fff;padding:16px 14px;margin:0 auto;width:302px;max-width:100%;box-shadow:0 10px 30px -14px rgba(0,0,0,.4);border-radius:4px}
+.rcpt.w58{width:220px;font-size:11.5px}
+.rcpt .c{text-align:center}.rcpt hr{border:0;border-top:1px dashed #111;margin:8px 0}
+.rcpt .r{display:flex;justify-content:space-between;gap:6px}.rcpt .r span:first-child{flex:1}.rcpt .r span:last-child{white-space:nowrap}
+.rcpt h4{margin:0;font:700 16px 'Courier New',monospace}
+.rcpt .big{font-size:15px;font-weight:700}
+/* panel */
+.plog{min-height:70vh;display:grid;place-items:center;background:var(--rose);padding:24px}
+.plog .vcard{width:min(400px,100%);text-align:center}
+.pin{letter-spacing:.6em;text-align:center;font-size:24px;font-weight:800}
+.ptop{background:var(--cocoa2);color:var(--on);padding:18px 0}
+.ptop .wrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.ptop h1{font-size:28px;color:#fff}
+.ptabs{display:flex;gap:6px;flex-wrap:wrap}
+.ptabs button{min-height:40px;padding:0 16px;border-radius:999px;border:0;background:rgba(255,255,255,.1);color:#fff;font-weight:700}
+.ptabs button.on{background:#f4bfcb;color:#3a2418}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0}
+.kpi{background:var(--card);border-radius:18px;padding:16px 18px;border:1px solid var(--line)}
+.kpi small{color:var(--mute);font-weight:700;font-size:13px}.kpi b{display:block;font:600 clamp(24px,3vw,32px) Fraunces,serif;margin-top:4px;white-space:nowrap}
+.board{display:grid;grid-template-columns:repeat(4,minmax(250px,1fr));gap:14px;overflow-x:auto;padding-bottom:20px;scroll-snap-type:x mandatory}
+.col{background:var(--soft);border-radius:20px;padding:12px;min-height:320px;scroll-snap-align:start}
+.col h3{font:800 14px Manrope;display:flex;justify-content:space-between;align-items:center;padding:4px 6px 10px}
+.col h3 em{font-style:normal;background:var(--card);border-radius:999px;padding:2px 10px}
+.oc{background:var(--card);border-radius:16px;padding:14px;margin-bottom:10px;border:1px solid var(--line);animation:pop .4s}
+.oc.new{box-shadow:0 0 0 2px var(--berry)}
+.oc .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.oc .top b{font:600 20px Fraunces,serif}
+.oc .who{font-weight:700;margin:4px 0 2px}
+.oc ul{margin:8px 0;padding-left:18px;font-size:14px}
+.pill{display:inline-block;font-size:12px;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--soft);margin:2px 4px 2px 0}
+.pill.ag{background:#fff0c9;color:#6b4e00}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.acts button{min-height:38px;padding:0 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);font-weight:700;font-size:13px}
+.acts .go{background:var(--cocoa);color:var(--on);border-color:var(--cocoa)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+th{font-size:13px;color:var(--mute)}
+td.n{text-align:right;white-space:nowrap}
+.sw{position:relative;width:52px;height:30px;flex:none;display:inline-block}
+.sw input{opacity:0;width:100%;height:100%;position:absolute;margin:0;cursor:pointer;z-index:1}
+.sw i{position:absolute;inset:0;border-radius:99px;background:var(--line);transition:.2s}
+.sw i::after{content:"";position:absolute;width:24px;height:24px;border-radius:50%;background:#fff;top:3px;left:3px;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.sw input:checked+i{background:var(--ok)}.sw input:checked+i::after{left:25px}
+.pricein{width:110px;min-height:40px;text-align:right}
+.toast{position:fixed;left:0;right:0;margin:auto;width:fit-content;text-align:center;top:18px;transform:translateY(-140px);z-index:99;background:var(--cocoa2);color:#fff;padding:14px 22px;border-radius:999px;font-weight:700;transition:transform .35s;box-shadow:var(--sh);max-width:92vw}
+.toast.on{transform:none}
+.sample{font-size:13px;color:var(--mute)}
+.mlink{display:none;margin-left:auto}
+@media(max-width:900px){.links{display:none}.mlink{display:inline-flex}.hgrid{grid-template-columns:1fr;grid-template-areas:'top' 'pic' 'body';row-gap:26px}.about,.visit{grid-template-columns:1fr}.stage{max-width:400px}.board{grid-template-columns:repeat(4,minmax(260px,82vw))}}
+@media(max-width:700px){#featured,#gifts{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-inline:calc(-1*max(5vw,16px));padding-inline:max(5vw,16px);scroll-padding-inline:max(5vw,16px);scrollbar-width:none}#featured>*,#gifts>*{scroll-snap-align:start}}
+@media(max-width:600px){.hero h1{font-size:34px}.tagline{font-size:27px}.stage{max-width:330px}.hgrid{padding-top:28px}.proof{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.proof>span{padding:8px 10px;font-size:11px;line-height:1.3}.proof b{font-size:16px}.proof .star{display:none}.maptag{font-size:13px}.brand small{display:none}.mi{grid-template-columns:minmax(0,1fr) 104px}.row2{grid-template-columns:1fr}.nav{gap:10px}.status{display:none}.cb-l{display:none}.brand>span:last-child{display:none}.brand span{font-size:16px}.marq{font-size:18px}
+table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:8em;text-align:start}.stack td::before{content:attr(data-l);float:inline-start;width:7.5em;margin-inline-start:-8em;font-weight:700;color:var(--mute)}.stack td:empty{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media print{body>*:not(#printArea){display:none!important}#printArea{display:block!important}#printArea .rcpt{box-shadow:none;width:100%}@page{margin:0;size:80mm auto}}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<link rel="stylesheet" href="painel.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <pattern id="mono" width="90" height="90" patternUnits="userSpaceOnUse"><text x="10" y="44" font-family="Fraunces,serif" font-size="40" font-weight="700" fill="currentColor">B</text><text x="55" y="88" font-family="Fraunces,serif" font-size="40" font-weight="700" fill="currentColor">B</text><path d="M60 22l3 5-3 5-3-5z M15 66l3 5-3 5-3-5z" fill="currentColor"/></pattern>
+ </defs>
+ <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3z"/></symbol>
+ <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zM17.5 6.5h0"/></symbol>
+ <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M5 8h14l-1 13H6L5 8zm4 0V6a3 3 0 0 1 6 0v2"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></symbol>
+ <symbol id="i-moto" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M5 18a3 3 0 1 0 0-.01M19 18a3 3 0 1 0 0-.01M8 18h7l3-6h-4l-2-4H9m6 0h3"/></symbol>
+ <symbol id="i-store" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 10v10h16V10M3 4h18l-1 6H4L3 4zm7 16v-5h4v5"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm9 3l-4.3-4.3"/></symbol>
+ <symbol id="i-print" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></symbol>
+</svg>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#inicio"><span class="logo"><b>Bianca<br>Abreu</b><img data-img="logo" alt=""></span><span>Bianca Abreu<small>Confeitaria artesanal · Codó</small></span></a>
+  <nav class="links">
+   <a href="#inicio" data-nav="inicio">Início</a>
+   <a href="#cardapio" data-nav="cardapio">Cardápio</a>
+   <a href="#inicio" data-jump="sobre">Sobre</a>
+   <a href="#inicio" data-jump="visite">Contato</a>
+  </nav>
+  <a class="btn sm ghost mlink" href="#cardapio">Cardápio</a>
+  <span class="status" id="stTop"><i></i><span>Aberto</span></span>
+  <button class="btn sm cartbtn" id="openCart" aria-label="Abrir sacola"><svg class="ico"><use href="#i-bag"/></svg><span class="cb-l">Sacola</span><em id="cartN" class="hide">0</em></button>
+ </div>
+</header>
+
+<!-- ============ INÍCIO ============ -->
+<main id="v-inicio">
+ <section class="hero">
+  <div class="wrap hgrid">
+   <div class="htop">
+    <p class="tagline">Com sabor e amor em cada mordida</p>
+    <h1>Transformando momentos em doçura, aqui em Codó</h1>
+   </div>
+   <div class="stage" aria-hidden="true">
+    <div class="arch media"><img data-img="bianca1" alt="Bianca Abreu segurando um bolo"></div>
+    <div class="float f1 media"><img data-img="vulcaoPremium" alt=""></div>
+    <div class="float f2 media"><img data-img="copoNinho" alt=""></div>
+    <div class="seal"><svg viewBox="0 0 100 100"><defs><path id="circ" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><text font-family="Manrope" font-weight="700" font-size="9.4" letter-spacing="2.2" fill="#f4bfcb"><textPath href="#circ">CONFEITARIA ARTESANAL · CODÓ · MA ·</textPath></text></svg><b>Bianca<br>Abreu</b></div>
+   </div>
+   <div class="hbody">
+    <p class="lead">Bolos vulcão, copos da felicidade, fatias supreme e bombons artesanais. Peça pelo site, retire na loja ou receba em casa, com entrega grátis a partir de R$&nbsp;30.</p>
+    <div class="proof"><span><b>4,9 <span class="star">★★★★★</span></b>54 avaliações no Google</span><span><b>19,6 mil</b>seguidores no Instagram</span><span><b>33 bairros</b>com delivery em Codó</span></div>
+    <div class="cta">
+     <a class="btn" href="#cardapio">Ver cardápio e pedir</a>
+     <a class="btn ghost" href="https://wa.me/5599981207545" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</a>
+    </div>
+   </div>
+  </div>
+ </section>
+ <div class="promo">Entrega grátis a partir de R$ 30 em 33 bairros de Codó · Terça a domingo, a partir das 13h</div>
+ <div class="marq" aria-hidden="true"><div id="marq"></div></div>
+
+ <section class="band">
+  <div class="wrap">
+   <div class="shead reveal"><div><div class="eyb">Da nossa vitrine</div><h2>Destaques do cardápio</h2></div><a class="btn ghost" href="#cardapio">Cardápio completo</a></div>
+   <div class="grid reveal" id="featured"></div>
+  </div>
+ </section>
+
+ <section class="band reels-band">
+  <div class="wrap">
+   <div class="shead reveal"><div><div class="eyb">Vem decorar comigo</div><h2>Os vídeos mais vistos da Bianca</h2></div><a class="btn ghost" href="https://www.instagram.com/biancaabreuconfeitaria/reels/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>Ver todos os vídeos</a></div>
+   <div class="reels reveal"><a class="reel" href="https://www.instagram.com/biancaabreuconfeitaria/reel/Dfk1wkehMrx/" target="_blank" rel="noopener"><div class="media"><img data-img="reel1" alt="Vídeo da Bianca Abreu no Instagram"></div><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="views">263 mil visualizações</span></a><a class="reel" href="https://www.instagram.com/biancaabreuconfeitaria/reel/Df3ES7BziOz/" target="_blank" rel="noopener"><div class="media"><img data-img="reel2" alt="Vídeo da Bianca Abreu no Instagram"></div><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="views">78,4 mil visualizações</span></a><a class="reel" href="https://www.instagram.com/biancaabreuconfeitaria/reel/Dfslxb0JAar/" target="_blank" rel="noopener"><div class="media"><img data-img="reel3" alt="Vídeo da Bianca Abreu no Instagram"></div><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="views">27,7 mil visualizações</span></a><a class="reel" href="https://www.instagram.com/biancaabreuconfeitaria/reel/Dfz23UkzTUu/" target="_blank" rel="noopener"><div class="media"><img data-img="reel4" alt="Vídeo da Bianca Abreu no Instagram"></div><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span><span class="views">22,5 mil visualizações</span></a></div>
+   <p class="note" style="margin-top:14px">Visualizações registradas no Instagram em novembro de 2026.</p>
+  </div>
+ </section>
+
+ <section class="band" id="sobre" style="background:var(--soft)">
+  <div class="wrap about">
+   <div class="mosaic reveal">
+    <div class="media"><span class="cap">Bianca Abreu, confeiteira</span><img data-img="bianca5" alt="Bianca Abreu, confeiteira"></div>
+    <div class="media"><img data-img="vulcaoG" alt="Bolo Vulcão de Ninho"></div>
+    <div class="media"><img data-img="copudim" alt="Copudim"></div>
+   </div>
+   <div class="reveal">
+    <div class="eyb">Nossa confeitaria</div>
+    <h2 style="font-size:clamp(32px,4.2vw,48px);margin-bottom:16px">Doces artesanais feitos em Codó</h2>
+    <p>A Bianca Abreu Confeitaria tem loja física na Av. Augusto Teixeira, em Codó, e faz delivery para 33 bairros da cidade. No Google, a loja tem nota 4,9 em 54 avaliações, e mais de 19 mil pessoas acompanham o dia a dia dos doces no Instagram.</p>
+    <p>No cardápio estão os bolos vulcão, os copos da felicidade, as fatias supreme, os bombons de morango e de uva e as coxinhas de morango, além de itens para presentear.</p>
+    <div class="who"><div class="media"><img data-img="bianca1" alt="Bianca Abreu"></div><div><b style="font:600 22px Fraunces,serif">Bianca Abreu</b><br><span class="mute">Confeiteira</span></div></div>
+   </div>
+  </div>
+  <div class="wrap reveal" style="margin-top:clamp(32px,4vw,56px)">
+    <div class="steps" style="margin-top:0">
+     <div class="step"><b>1</b><h3>Escolha</h3><p>Monte sua sacola com bolos, copos, fatias e mimos.</p></div>
+     <div class="step"><b>2</b><h3>Finalize</h3><p>Diga se vai retirar ou receber, e como prefere pagar.</p></div>
+     <div class="step"><b>3</b><h3>Saboreie</h3><p>A loja confirma pelo WhatsApp e prepara tudo com carinho.</p></div>
+    </div>
+    <div class="extra">
+     <a href="https://wa.me/5599981207545?text=Ol%C3%A1!%20Quero%20saber%20sobre%20os%20cursos%20de%20confeitaria." target="_blank" rel="noopener"><b>Cursos de confeitaria</b><span class="mute">A Bianca também oferece cursos. Pergunte pelo WhatsApp.</span></a>
+     <a href="https://www.instagram.com/estacaodobrigadeiro.ba" target="_blank" rel="noopener"><b>Estação do Brigadeiro</b><span class="mute">Conheça também a @estacaodobrigadeiro.ba.</span></a>
+    </div>
+  </div>
+ </section>
+
+ <section class="band">
+  <div class="wrap">
+   <div class="shead reveal"><div><div class="eyb">Quem faz</div><h2>Bianca Abreu, a confeiteira</h2></div><a class="btn ghost" href="https://www.instagram.com/biancaabreuconfeitaria" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg>@biancaabreuconfeitaria</a></div>
+   <div class="gal reveal">
+    <div class="media"><img data-img="bianca2" alt="Bianca Abreu com bolo decorado"></div>
+    <div class="media"><img data-img="bianca4" alt="Bianca Abreu com bolo de aniversário"></div>
+    <div class="media"><img data-img="bianca6" alt="Ensaio da Bianca Abreu"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="band revs-band">
+  <div class="wrap">
+   <div class="rvhead reveal"><div class="rvscore"><b>4,9</b><div><span class="stars">★★★★★</span><span>54 avaliações no Google</span></div></div><div><div class="eyb">Quem prova, recomenda</div><h2>O que os clientes dizem</h2></div></div>
+   <div class="rvgrid reveal"><figure class="rv"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Torta simplesmente perfeita. Sabor equilibrado, umidade da massa na medida certa, qualidade e dedicação define.”</blockquote><figcaption>Gigi A. <span>· avaliação no Google</span></figcaption></figure><figure class="rv"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Os produtos são de excelente qualidade, o atendimento e a entrega são rápidos e eficientes.”</blockquote><figcaption>Silvia M. <span>· avaliação no Google</span></figcaption></figure><figure class="rv"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Uma excelente opção para os amantes de doces na cidade de Codó. Recomendo, pois são de qualidade e muito saborosos.”</blockquote><figcaption>Filipe C. <span>· avaliação no Google</span></figcaption></figure><figure class="rv"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Atendimento maravilhoso, ambiente limpo, lindo e super confortável.”</blockquote><figcaption>Joyna S. <span>· avaliação no Google</span></figcaption></figure><figure class="rv"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Ótimo atendimento, melhores doces da cidade.”</blockquote><figcaption>Mariane C. <span>· avaliação no Google</span></figcaption></figure><figure class="rv"><div class="stars" aria-label="5 estrelas">★★★★★</div><blockquote>“Entrega super rápida e tudo muito bom!”</blockquote><figcaption>Francisca J. <span>· avaliação no Google</span></figcaption></figure></div>
+   <p style="margin-top:22px"><a class="btn ghost sm" href="https://www.google.com/maps/place/Bianca+Abreu+Confeitaria/@-4.4588131,-43.8883388,17z" target="_blank" rel="noopener">Ver todas as avaliações no Google</a></p>
+  </div>
+ </section>
+
+ <section class="band gift">
+  <div class="wrap">
+   <div class="shead reveal"><div><div class="eyb">Para presentear</div><h2>Um mimo pronto para entregar</h2></div><p class="mute" style="max-width:30em;margin:0">Sacola presenteável, cartinha com recado escrito e topo para o bolo. É só adicionar junto com os doces.</p></div>
+   <div class="grid reveal" id="gifts"></div>
+  </div>
+ </section>
+
+ <section class="band" id="visite">
+  <div class="wrap visit">
+   <div class="vcard reveal">
+    <div class="eyb">Venha nos visitar</div>
+    <h3>Bianca Abreu Confeitaria</h3>
+    <div class="line"><svg class="ico"><use href="#i-pin"/></svg><div>Av. Augusto Teixeira, 2556 – R. São Sebastião<br>Codó – MA, 65400-000<br><a href="https://www.google.com/maps/dir/?api=1&destination=Bianca%20Abreu%20Confeitaria%2C%20Av.%20Augusto%20Teixeira%20-%20R.%20S%C3%A3o%20Sebasti%C3%A3o%2C%202556%20-%20Cod%C3%B3%2C%20MA%2C%2065400-000%2C%20Brazil" target="_blank" rel="noopener">Traçar rota no Google Maps</a></div></div>
+    <div class="line"><svg class="ico"><use href="#i-wa"/></svg><div>WhatsApp <b>(99) 98120-7545</b><br><a href="https://wa.me/5599981207545" target="_blank" rel="noopener">Chamar agora</a></div></div>
+    <div class="line"><svg class="ico"><use href="#i-ig"/></svg><div>@biancaabreuconfeitaria<br><a href="https://www.instagram.com/biancaabreuconfeitaria" target="_blank" rel="noopener">Seguir no Instagram</a></div></div>
+    <div class="line"><svg class="ico"><use href="#i-moto"/></svg><div>Retirada na loja ou delivery em 33 bairros de Codó. <b>Entrega grátis a partir de R$ 30.</b> Abaixo disso, a taxa é confirmada no WhatsApp.</div></div>
+    <h3 style="font-size:22px;margin:18px 0 6px">Horário de funcionamento</h3><table class="hours" id="hours"></table>
+   </div>
+   <a class="mapart reveal" href="https://www.google.com/maps/dir/?api=1&destination=Bianca%20Abreu%20Confeitaria%2C%20Av.%20Augusto%20Teixeira%20-%20R.%20S%C3%A3o%20Sebasti%C3%A3o%2C%202556%20-%20Cod%C3%B3%2C%20MA%2C%2065400-000%2C%20Brazil" target="_blank" rel="noopener" aria-label="Abrir rota no mapa">
+    <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+     <rect width="600" height="420" fill="#f4bfcb"/>
+     <g stroke="#fff" stroke-linecap="round" fill="none"><path d="M-20 300 C150 260 260 330 620 220" stroke-width="34"/><path d="M180 -20 L250 440" stroke-width="22"/><path d="M-20 120 L620 150" stroke-width="14"/><path d="M420 -20 L380 440" stroke-width="14"/><path d="M-20 400 L620 360" stroke-width="10"/></g>
+     <g fill="#eaa3b4"><rect x="30" y="160" width="120" height="80" rx="10"/><rect x="290" y="170" width="70" height="60" rx="10"/><rect x="440" y="40" width="140" height="80" rx="10"/><rect x="30" y="20" width="120" height="70" rx="10"/><rect x="460" y="270" width="120" height="70" rx="10"/></g>
+     <text x="300" y="296" font-family="Manrope" font-size="15" font-weight="700" fill="#5b3a26" transform="rotate(-6 300 296)">Av. Augusto Teixeira</text>
+     <g transform="translate(236 210)"><ellipse cx="0" cy="56" rx="26" ry="8" fill="#5b3a26" opacity=".25"/><path d="M0 54 C-30 18 -34 4 -34 -10 a34 34 0 0 1 68 0 C34 4 30 18 0 54z" fill="#5b3a26"/><circle r="15" cy="-10" fill="#f4bfcb"/><text y="-4" text-anchor="middle" font-family="Fraunces" font-weight="700" font-size="17" fill="#5b3a26">B</text></g>
+     
+    </svg>
+    <span class="maptag">Abrir rota no Google Maps →</span>
+   </a>
+  </div>
+ </section>
+</main>
+
+<!-- ============ CARDÁPIO ============ -->
+<main id="v-cardapio" class="hide">
+ <section class="mhero">
+  <svg class="pattern" aria-hidden="true"><rect width="100%" height="100%" fill="url(#mono)"/></svg>
+  <div class="wrap">
+   <div><div class="eyb">Peça online</div><h1>Nosso cardápio</h1><p style="margin:6px 0 0" id="openMsg">Retirada na loja ou delivery em Codó</p></div>
+   <label class="search"><svg class="ico"><use href="#i-search"/></svg><input id="q" type="search" placeholder="Buscar bolo, copo, fatia…" aria-label="Buscar no cardápio"></label>
+  </div>
+ </section>
+ <nav class="tabs"><div class="wrap" id="tabs"></div></nav>
+ <div class="wrap" id="menu" style="padding-bottom:120px"></div>
+ <button class="btn fab hide" id="fab"><svg class="ico"><use href="#i-bag"/></svg><span id="fabT">Ver sacola</span></button>
+</main>
+
+<!-- ============ PAINEL ============ -->
+<main id="v-painel" class="hide"><div id="pnl"></div></main>
+
+<footer>
+ <div class="wrap fgrid2">
+  <div><b class="fbrand">Bianca Abreu Confeitaria</b><p class="fsig">Com sabor e amor em cada mordida</p><p>Av. Augusto Teixeira, 2556 – R. São Sebastião<br>Codó – MA, 65400-000</p></div>
+  <div><h4>Horários</h4><p>Terça a quinta e sábado: 13h às 19h<br>Sexta: 13h às 18h<br>Domingo: 13h às 18h30<br>Segunda: fechado</p></div>
+  <div><h4>Fale com a gente</h4><p><a href="https://wa.me/5599981207545" target="_blank" rel="noopener">WhatsApp (99) 98120-7545</a><br><a href="https://www.instagram.com/biancaabreuconfeitaria" target="_blank" rel="noopener">Instagram @biancaabreuconfeitaria</a><br><a href="#cardapio">Cardápio e pedidos</a><br><a href="#painel">Área da loja</a></p></div>
+ </div>
+ <div class="wrap"><div class="fbot">© Bianca Abreu Confeitaria · Codó – MA</div></div>
+</footer>
+
+<!-- sacola -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cart" aria-label="Sacola">
+ <div class="dh"><h2 id="cartTitle">Sua sacola</h2><button class="x" data-close aria-label="Fechar">×</button></div>
+ <div class="db" id="cartBody"></div>
+ <div class="df" id="cartFoot"></div>
+</aside>
+<!-- modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="box" id="mbox"></div></div>
+<div id="printArea" class="hide"></div>
+<a class="wafloat" id="wafloat" href="https://wa.me/5599981207545?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Bianca%20Abreu%20Confeitaria." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<div class="toast" id="toast"></div>
+
+<script>
+{
+const PHONE='5599981207545';
+const CATS=[
+ ['caseirinhos','Caseirinhos'],['copos','Copo da Felicidade'],['fatias','Fatias Supreme'],['bombons','Bombom aberto'],['coxinhas','Coxinha de morango'],
+ ['tortas','Tortas e tortinhas'],['trufas','Trufas'],['pudim','Pudim'],['presentes','Itens presenteáveis'],['lembrancinhas','Lembrancinhas'],['bebidas','Bebidas']];
+const P=[
+ ['vulcaoPremium','caseirinhos','Bolo Vulcão Premium (Chocolatudo)','Massa 50% cacau recheada com chocolate gourmet, finalizada com docinhos e morangos. Serve 10 fatias.',77],
+ ['vulcaoG','caseirinhos','Bolo Vulcão de Ninho G','Massa de chocolate com recheio de ninho. Serve até 10 fatias.',60],
+ ['vulcaoM','caseirinhos','Bolo Vulcão M','Massa super fofa 50% cacau recheada com ninho, finalizada com fios de Nutella e morango. Serve de 4 a 5 fatias.',30],
+ ['copoNinho','copos','Copo Ninho Duplo','Mousse de ninho, creme de ninho, pedaços de brownie, geleia de morango, finalizado com moranguinho e brownie.',18],
+ ['copoBrigadeiro','copos','Copo de Brigadeiro','Creme de chocolate, creme de ninho, pedaços de brownie, finalizado com moranguinho e boleado de brigadeiro.',18],
+ ['copoOuroBranco','copos','Copo de Ouro Branco Supreme','Creme de ninho, pedaços de Ouro Branco, mousse de chocolate, amendoim triturado e chocolate.',18],
+ ['copudim','copos','Copudim','Creme de ninho, pedaços de brownie, chocolate gourmet e mousse de ninho, finalizado com mini pudim de leite.',18],
+ ['copoMaracuja','copos','Copo de Maracujá Supreme','Recheio de maracujá, creme de chocolate e brownie. Uma explosão de sabores.',18],
+ ['copoAbacaxi','copos','Copo Nuvem Abacaxi','Camadas de ninho, mousse de ninho e abacaxi. A combinação perfeita.',18],
+ ['fatiaRedVelvet','fatias','Fatia Red Velvet Supreme','Mega fatia red com duas camadas de ninho e geleia de morango, finalizada com chantilly e morango.',22],
+ ['fatiaNinhoNutella','fatias','Fatia Ninho com Nutella','Massa branca recheada com ninho e pura Nutella.',18],
+ ['fatiaChocoblack','fatias','Fatia Chocoblack','Massa cacau black com mousse de chocolate e recheio gourmet, finalizada com creme de chocolate e granulado nobre.',18],
+ ['fatiaChocolatuda','fatias','Fatia Chocolatuda','Massa de chocolate recheada com chocolate gourmet, finalizada com granulado nobre.',18],
+ ['fatiaPrestigio','fatias','Fatia Prestígio','Massa de chocolate, recheio de coco, finalizada com chocolate cremoso.',18],
+ ['bombomMorango','bombons','Bombom de Morango','Morangos frescos com creme de ninho, finalizados com chocolate gourmet.',14],
+ ['bombomUva','bombons','Bombom de Uva','Uva sem semente com creme de ninho e creme de chocolate gourmet.',14],
+ ['coxinhaNutella','coxinhas','Coxinha de Morango com Nutella','',13],
+ ['coxinhaBrigadeiro','coxinhas','Coxinha de Morango Brigadeiro','',13,1],
+ ['tortaUva','tortas','Torta de Uva','Base de brownie, recheio de ninho e uvas sem semente, finalizada com ganache de chocolate.',18,1],
+ ['trufa','trufas','Trufa de Ninho com Nutella','',6],
+ ['pudim','pudim','Pudim de Leite','',12],
+ ['sacola','presentes','Sacola Presenteável P','',7],
+ ['cartinha','lembrancinhas','Cartinha','Escreva uma mensagem de carinho para aquela pessoa especial. Deixe o texto na observação do item.',3],
+ ['topo','lembrancinhas','Topo para seu Bolo','',9],
+ ['vela','lembrancinhas','Vela para seu Bolo','',6,1],
+ ['sprite','bebidas','Sprite Zero Lemon','',6],['guarana','bebidas','Guaraná Jesus (lata)','',6],['coca','bebidas','Coca Zero (lata)','',6]
+].map(([k,c,n,d,p,o])=>({k,c,n,d,p,o:!!o}));
+const FEAT=['vulcaoPremium','copoNinho','fatiaRedVelvet','bombomMorango','vulcaoM','copudim','fatiaChocoblack','coxinhaNutella'];
+const GIFT=['sacola','cartinha','topo','trufa'];
+const HOR=[['Domingo','13:00','18:30'],['Segunda-feira'],['Terça-feira','13:00','19:00'],['Quarta-feira','13:00','19:00'],['Quinta-feira','13:00','19:00'],['Sexta-feira','13:00','18:00'],['Sábado','13:00','19:00']];
+const BAIRROS=['Centro','Cidade Jardins','Codó Novo','Conjunto Cajueiro','Conjunto Primavera','Dallas','Ecoville','Fomento','Montevidéu 1','Montevidéu 2','Mutirão','Nova Jerusalém','Novo Milênio','Residencial Cidade Jardins','Residencial Santa Rita','Residencial São Pedro','Residencial Sol Nascente','Residencial Trizidela','Santa Filomena','Santa Teresinha','Santo Antônio','São Benedito','São Francisco','São José','São Pedro','São Raimundo','São Sebastião','São Vicente Pallote','Trizidela','Vereda','Vila Biné','Vila Fomento','Villa Gold'];
+const FRETE_GRATIS=30;
+const toMin=t=>{const[a,b]=t.split(':');return +a*60+ +b};
+function horario(){const d=new Date(),dw=d.getDay(),m=d.getHours()*60+d.getMinutes(),h=HOR[dw];
+ const open=!!h[1]&&m>=toMin(h[1])&&m<toMin(h[2]);if(open)return{open,txt:'Aberto · até '+h[2].replace(':00','h')};
+ for(let i=0;i<8;i++){const j=(dw+i)%7,x=HOR[j];if(!x[1])continue;if(i===0&&m>=toMin(x[1]))continue;return{open,txt:'Fechado · abre '+(i===0?'hoje':i===1?'amanhã':x[0].split('-')[0].toLowerCase())+' às '+x[1].replace(':00','h')}}
+ return{open,txt:'Fechado'}}
+const lojaAberta=()=>cfg.aberto&&horario().open;
+const ST=[['novo','Novos'],['preparo','Em preparo'],['pronto','Pronto / saiu'],['concluido','Concluídos']];
+
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const brl=v=>(+v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const ls={get(k,d){try{const v=localStorage.getItem('ba_'+k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem('ba_'+k,JSON.stringify(v))}catch(e){}}};
+let fotos={};
+const src=k=>{const v=fotos[k];return v?(String(v).startsWith('data:image/')?v:'/_blob/'+encodeURIComponent(v)):'img/'+k+'.webp'};
+const img=(k,alt='')=>`<img src="${esc(src(k))}" alt="${esc(alt)}" loading="lazy" onerror="this.remove()">`;
+function hydrate(){document.querySelectorAll('img[data-img]').forEach(i=>{const u=src(i.dataset.img);if(i.getAttribute('src')!==u){i.style.display='';i.onerror=()=>{i.style.display='none'};i.src=u}})}
+const toast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2600)};
+
+/* ---------- estado ---------- */
+let cfg={aberto:true,esgot:[],precos:{},descs:{},largura:80,auto:false,pin:'1234',pix:{chave:'',nome:'BIANCA ABREU',cidade:'CODO'},px:{meta:'',ga4:'',ads:'',tiktok:''}};
+let orders=[];let cart=ls.get('cart',[]);let db=null,dbOk=false,unsub=null;
+const prod=k=>P.find(p=>p.k===k);
+const priceOf=p=>cfg.precos[p.k]!=null?+cfg.precos[p.k]:p.p;
+const descOf=p=>(cfg.descs&&cfg.descs[p.k]!=null)?cfg.descs[p.k]:p.d;
+const isOut=p=>cfg.esgot?cfg.esgot.includes(p.k):p.o;
+P.forEach(p=>{if(p.o&&!ls.get('cfg',null))cfg.esgot.push(p.k)});
+Object.assign(cfg,ls.get('cfg',{}));
+orders=ls.get('orders',[]);fotos=ls.get('fotos',{});let assets=null;(async()=>{try{assets=await window.claude?.use?.('assets')}catch(e){}})();
+
+/* ---------- armazenamento (db compartilhado com fallback local) ---------- */
+const store={
+ async saveOrder(o){if(dbOk){try{await db.collection('pedidos').doc(o.id).set(o);return}catch(e){dbOk=false}}
+  orders=[o,...orders.filter(x=>x.id!==o.id)];ls.set('orders',orders);renderPanel()},
+ async patch(id,ch){const o=orders.find(x=>x.id===id);if(!o)return;const n={...o,...ch};
+  if(dbOk){try{await db.collection('pedidos').doc(id).update(ch);return}catch(e){dbOk=false}}
+  orders=orders.map(x=>x.id===id?n:x);ls.set('orders',orders);renderPanel()},
+ async del(id){if(dbOk){try{await db.collection('pedidos').doc(id).delete();return}catch(e){dbOk=false}}
+  orders=orders.filter(x=>x.id!==id);ls.set('orders',orders);renderPanel()},
+ async saveCfg(){ls.set('cfg',cfg);if(dbOk){try{await db.doc('config/loja').set(cfg)}catch(e){}}applyCfg()}
+};
+(async()=>{try{db=await window.claude?.use?.('db')}catch(e){db=null}
+ if(!db){setSync();return}
+ dbOk=true;setSync();
+  db.doc('config/fotos').onSnapshot(s=>{if(s.exists){fotos={...s.data()};ls.set('fotos',fotos);refreshImgs()}},()=>{});
+ db.doc('config/loja').onSnapshot(s=>{if(s.exists){cfg={...cfg,...s.data()};ls.set('cfg',cfg);applyCfg()}},()=>{});
+ const t=setTimeout(()=>setSync('Sem conexão com o servidor: mostrando pedidos deste aparelho.'),10000);
+ let first=true;
+ unsub=db.collection('pedidos').orderBy('criado','desc').limit(1000).onSnapshot(s=>{clearTimeout(t);
+  const fresh=s.docs.map(d=>({...d.data(),id:d.id}));
+  const added=first?[]:s.docChanges().filter(c=>c.type==='added'&&c.doc.data()?.status==='novo'&&!c.doc.metadata.hasPendingWrites).map(c=>c.doc.id);
+  first=false;orders=fresh;ls.set('orders',orders);setSync();if(added.length&&window.BAPanel)window.BAPanel.onNew(added);else renderPanel()},()=>{dbOk=false;setSync()});
+})();
+addEventListener('storage',e=>{if(e.key!=='ba_orders'||dbOk)return;const prev=new Set(orders.map(o=>o.id));orders=ls.get('orders',[]);const added=orders.filter(o=>!prev.has(o.id)&&o.status==='novo').map(o=>o.id);if(added.length&&window.BAPanel)window.BAPanel.onNew(added);else renderPanel()});
+function setSync(m){const e=$('#syncMsg');if(!e)return;e.textContent=m||(dbOk?'Pedidos sincronizados ao vivo entre os aparelhos da loja.':'Modo demonstração: pedidos salvos neste navegador.')}
+
+/* ---------- roteamento ---------- */
+const views=['inicio','cardapio','painel'];
+function route(){let h=location.hash.slice(1)||'inicio';if(!views.includes(h))h='inicio';
+ views.forEach(v=>$('#v-'+v).classList.toggle('hide',v!==h));
+ $$('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===h));
+ $('#openCart').classList.toggle('hide',h==='painel');
+ document.body.classList.toggle('in-panel',h==='painel');closeAll();if(h==='painel')renderPanel();window.scrollTo(0,0);updFab()}
+window.addEventListener('hashchange',route);
+$$('[data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();if(location.hash&&location.hash!=='#inicio'){location.hash='inicio';setTimeout(()=>$('#'+a.dataset.jump).scrollIntoView(),60)}else $('#'+a.dataset.jump).scrollIntoView()}));
+
+/* ---------- vitrines ---------- */
+const card=p=>`<article class="pc${isOut(p)?' out':''}" data-p="${p.k}"><div class="media${p.c==='bebidas'?' pack':''}" style="aspect-ratio:1/.86">${isOut(p)?'<span class="tag">Esgotado hoje</span>':''}${img(p.k,p.n)}</div><div class="bd"><h3>${esc(p.n)}</h3><p>${esc(descOf(p))}</p><div class="ft"><span class="price">${brl(priceOf(p))}</span><button class="add" data-add="${p.k}" aria-label="Adicionar ${esc(p.n)}">+</button></div></div></article>`;
+function renderShow(){$('#featured').innerHTML=FEAT.map(k=>card(prod(k))).join('');$('#gifts').innerHTML=GIFT.map(k=>card(prod(k))).join('');
+ const m=CATS.map(c=>`<span>${esc(c[1])}</span>`).join('');$('#marq').innerHTML=m+m}
+function renderMenu(){const q=($('#q').value||'').trim().toLowerCase();
+ const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+ let html='';CATS.forEach(([ck,cn])=>{const items=P.filter(p=>p.c===ck&&(!q||norm(p.n+' '+descOf(p)).includes(norm(q))));if(!items.length)return;
+  html+=`<section class="cat" id="c-${ck}"><h2>${esc(cn)}<small>${items.length} ${items.length>1?'opções':'opção'}</small></h2><div class="mlist">${items.map(p=>`<article class="mi${isOut(p)?' out':''}" data-p="${p.k}"><div class="bd"><h3>${esc(p.n)}</h3><p>${esc(descOf(p))}</p><span class="price">${brl(priceOf(p))}${isOut(p)?' <small class="mute" style="font-weight:600">· esgotado hoje</small>':''}</span></div><div class="media${p.c==='bebidas'?' pack':''}">${img(p.k,p.n)}</div></article>`).join('')}</div></section>`});
+ $('#menu').innerHTML=html||'<p class="empty">Nada encontrado. Tente outro nome, como “ninho” ou “morango”.</p>';
+ $('#tabs').innerHTML=CATS.filter(([ck])=>$('#c-'+ck)).map(([ck,cn])=>`<a href="#cardapio" data-cat="${ck}">${esc(cn)}</a>`).join('')}
+$('#q').addEventListener('input',renderMenu);
+$('#tabs').addEventListener('click',e=>{const a=e.target.closest('[data-cat]');if(!a)return;e.preventDefault();$$('#tabs a').forEach(x=>x.classList.remove('on'));a.classList.add('on');const t=$('#c-'+a.dataset.cat);window.scrollTo({top:t.getBoundingClientRect().top+scrollY-140,behavior:'smooth'})});
+document.addEventListener('click',e=>{const add=e.target.closest('[data-add]');if(add){e.stopPropagation();const p=prod(add.dataset.add);if(isOut(p))return toast('Esgotado hoje');addCart(p.k,1,'');return}
+ const c=e.target.closest('[data-p]');if(c&&!e.target.closest('#v-painel'))openProduct(c.dataset.p)});
+
+/* ---------- produto ---------- */
+function openModal(h){$('#mbox').innerHTML=h;$('#modal').classList.add('on');$('#scrim').classList.add('on');$('#mbox').scrollTop=0}
+function closeAll(){$('#modal').classList.remove('on');$('#cart').classList.remove('on');$('#scrim').classList.remove('on')}
+$('#scrim').addEventListener('click',closeAll);$('#modal').addEventListener('click',e=>{if(e.target.id==='modal'||e.target.closest('[data-close]'))closeAll()});
+$('#cart').addEventListener('click',e=>{if(e.target.closest('[data-close]'))closeAll()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+function openProduct(k){const p=prod(k);let q=1;const out=isOut(p);
+ openModal(`<div class="media" style="aspect-ratio:16/11">${img(p.k,p.n)}</div><div class="pm"><div style="display:flex;justify-content:space-between;gap:12px;align-items:start"><h2>${esc(p.n)}</h2><button class="x" data-close aria-label="Fechar">×</button></div><p class="mute" style="margin:0 0 6px">${esc(descOf(p))}</p><div class="price" style="font-size:24px">${brl(priceOf(p))}</div>
+ <label class="f" for="pObs">Alguma observação?</label><textarea class="in" id="pObs" placeholder="Ex.: escrever “Feliz aniversário, Ana” na cartinha"></textarea>
+ <div style="display:flex;gap:12px;align-items:center;margin-top:18px"><div class="qty"><button id="qm" aria-label="Menos">−</button><span id="qv">1</span><button id="qp" aria-label="Mais">+</button></div><button class="btn${out?' ghost':''}" id="pAdd" style="flex:1" ${out?'disabled':''}>${out?'Esgotado hoje':'Adicionar · <span id="qt">'+brl(priceOf(p))+'</span>'}</button></div></div>`);
+ const up=()=>{$('#qv').textContent=q;const t=$('#qt');if(t)t.textContent=brl(q*priceOf(p))};
+ $('#qm').onclick=()=>{q=Math.max(1,q-1);up()};$('#qp').onclick=()=>{q++;up()};
+ if(!out)$('#pAdd').onclick=()=>{addCart(p.k,q,$('#pObs').value.trim());closeAll()}}
+
+/* ---------- sacola ---------- */
+function addCart(k,q,obs){const i=cart.findIndex(x=>x.k===k&&x.obs===obs);if(i>-1)cart[i].q+=q;else cart.push({k,q,obs});saveCart();toast(prod(k).n+' na sacola');track('AddToCart',{value:priceOf(prod(k))*q,currency:'BRL'});
+ const b=$('#openCart');b.animate([{transform:'scale(1)'},{transform:'scale(1.15)'},{transform:'scale(1)'}],{duration:400})}
+function saveCart(){cart=cart.filter(x=>x.q>0&&prod(x.k));ls.set('cart',cart);const n=cart.reduce((a,x)=>a+x.q,0);const e=$('#cartN');e.textContent=n;e.classList.toggle('hide',!n);updFab();if($('#cart').classList.contains('on')&&!$('#cart').dataset.step)renderCart()}
+const sub=()=>cart.reduce((a,x)=>a+x.q*priceOf(prod(x.k)),0);
+function updFab(){const n=cart.reduce((a,x)=>a+x.q,0);const show=n&&location.hash==='#cardapio';$('#fab').classList.toggle('hide',!show);$('#wafloat').classList.toggle('hide',!!show||location.hash==='#painel');$('#fabT').textContent=`Ver sacola · ${n} ${n>1?'itens':'item'} · ${brl(sub())}`}
+$('#fab').onclick=openCart;$('#openCart').onclick=openCart;
+function openCart(){delete $('#cart').dataset.step;renderCart();$('#cart').classList.add('on');$('#scrim').classList.add('on')}
+function renderCart(){$('#cartTitle').textContent='Sua sacola';
+ if(!cart.length){$('#cartBody').innerHTML=`<div class="empty"><p style="font:600 22px Fraunces,serif;color:var(--ink)">Sua sacola está vazia</p><p>Que tal começar por um bolo vulcão?</p><a class="btn" href="#cardapio" data-close>Ver cardápio</a></div>`;$('#cartFoot').innerHTML='';return}
+ $('#cartBody').innerHTML=cart.map((x,i)=>{const p=prod(x.k);return`<div class="ci"><div class="media">${img(p.k)}</div><div><b>${esc(p.n)}</b><small>${brl(priceOf(p))}${x.obs?' · '+esc(x.obs):''}</small></div><div class="qty"><button data-q="${i}" data-d="-1" aria-label="Menos">−</button><span>${x.q}</span><button data-q="${i}" data-d="1" aria-label="Mais">+</button></div></div>`}).join('')+
+ `<p class="note">Quer presentear? Adicione a <a href="#cardapio" data-close>sacola presenteável e a cartinha</a>.</p>`;
+ $('#cartFoot').innerHTML=`<div class="tot"><span>Subtotal</span><span>${brl(sub())}</span></div><p class="note" style="margin:0 0 12px">${sub()>=FRETE_GRATIS?'<b style="color:var(--ok)">Você ganhou entrega grátis!</b>':'Faltam '+brl(FRETE_GRATIS-sub())+' para a entrega grátis.'}</p><button class="btn" style="width:100%" id="goCk">Continuar</button>`;
+ $('#goCk').onclick=renderCheckout}
+$('#cartBody').addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(!b)return;cart[+b.dataset.q].q+=+b.dataset.d;saveCart();renderCart()});
+
+function renderCheckout(){$('#cart').dataset.step='ck';$('#cartTitle').textContent='Finalizar pedido';const c=ls.get('cliente',{});
+ const today=new Date();const iso=new Date(today-today.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+ $('#cartBody').innerHTML=`<form id="ck" novalidate>
+ <label class="f" for="cNome">Seu nome</label><input class="in" id="cNome" required autocomplete="name" value="${esc(c.nome)}">
+ <label class="f" for="cTel">WhatsApp</label><input class="in" id="cTel" required inputmode="tel" autocomplete="tel" placeholder="(99) 9 0000-0000" value="${esc(c.tel)}">
+ <label class="f">Como quer receber?</label><div class="seg"><label><input type="radio" name="tipo" value="retirada" checked><svg class="ico"><use href="#i-store"/></svg>Retirar na loja</label><label><input type="radio" name="tipo" value="entrega"><svg class="ico"><use href="#i-moto"/></svg>Delivery</label></div>
+ <div id="addr" class="hide"><label class="f" for="cBairro">Bairro</label><select class="in" id="cBairro"><option value="">Selecione o bairro</option>${BAIRROS.map(b=>`<option ${c.bairro===b?'selected':''}>${esc(b)}</option>`).join('')}<option value="Outro">Outro bairro (consultar)</option></select><label class="f" for="cEnd">Rua, número e complemento</label><input class="in" id="cEnd" autocomplete="street-address" placeholder="Rua, número, complemento" value="${esc(c.end)}"><label class="f" for="cRef">Ponto de referência</label><input class="in" id="cRef" value="${esc(c.ref)}"></div>
+ <label class="f">Quando?</label><div class="seg"><label><input type="radio" name="quando" value="agora" ${lojaAberta()?'checked':''}>O quanto antes</label><label><input type="radio" name="quando" value="agendado" ${lojaAberta()?'':'checked'}>Agendar encomenda</label></div>
+ <div id="agd" class="${lojaAberta()?'hide ':''}row2"><div><label class="f" for="cData">Data</label><input class="in" type="date" id="cData" min="${iso}" value="${iso}"></div><div><label class="f" for="cHora">Horário</label><input class="in" type="time" id="cHora" value="15:00"></div></div>
+ <label class="f">Pagamento</label><div class="seg"><label><input type="radio" name="pag" value="Pix" checked>Pix</label><label><input type="radio" name="pag" value="Cartão">Cartão</label><label><input type="radio" name="pag" value="Dinheiro">Dinheiro</label></div>
+ <div id="troco" class="hide"><label class="f" for="cTroco">Troco para quanto?</label><input class="in" id="cTroco" inputmode="decimal" placeholder="Ex.: 100"></div>
+ <label class="f" for="cObs">Observações do pedido</label><textarea class="in" id="cObs" placeholder="Algo que a loja precise saber?"></textarea>
+ <p class="note" id="ckErr" style="color:var(--berry);font-weight:700"></p></form>`;
+ $('#cartFoot').innerHTML=`<div class="tot"><span>${cart.reduce((a,x)=>a+x.q,0)} itens</span><span>${brl(sub())}</span></div><div class="tot"><span>Entrega</span><span>${sub()>=FRETE_GRATIS?'Grátis':'A confirmar'}</span></div><div class="tot big"><span>Total</span><span>${brl(sub())}</span></div><div style="display:flex;gap:10px"><button class="btn ghost" id="back">Voltar</button><button class="btn" style="flex:1" id="send">Enviar pedido</button></div>`;
+ const f=$('#ck');f.addEventListener('change',()=>{$('#addr').classList.toggle('hide',f.tipo.value!=='entrega');$('#agd').classList.toggle('hide',f.quando.value!=='agendado');$('#troco').classList.toggle('hide',f.pag.value!=='Dinheiro')});
+ f.addEventListener('submit',e=>e.preventDefault());$('#back').onclick=()=>{delete $('#cart').dataset.step;renderCart()};$('#send').onclick=submitOrder}
+
+async function submitOrder(){const f=$('#ck'),err=$('#ckErr');const v=id=>$(id).value.trim();
+ if(!lojaAberta()&&f.quando.value!=='agendado'){err.textContent='Estamos fechados agora. Escolha “Agendar encomenda” e diga o dia e horário.';return}
+ if(v('#cNome').length<2)return err.textContent='Informe seu nome.',$('#cNome').focus();
+ if(v('#cTel').replace(/\D/g,'').length<10)return err.textContent='Informe um WhatsApp com DDD.',$('#cTel').focus();
+ if(f.tipo.value==='entrega'&&!v('#cBairro'))return err.textContent='Selecione o bairro.',$('#cBairro').focus();
+ if(f.tipo.value==='entrega'&&v('#cEnd').length<5)return err.textContent='Informe o endereço de entrega.',$('#cEnd').focus();
+ const btn=$('#send');btn.disabled=true;btn.textContent='Enviando…';
+ const cli={nome:v('#cNome'),tel:v('#cTel'),end:v('#cEnd'),ref:v('#cRef'),bairro:v('#cBairro')};ls.set('cliente',cli);
+ const num=Math.max(1000,...orders.map(o=>+o.num||0))+1;
+ const o={id:'p'+Date.now().toString(36)+Math.random().toString(36).slice(2,6),num,criado:Date.now(),status:'novo',
+  cliente:{nome:cli.nome,tel:cli.tel},tipo:f.tipo.value,endereco:f.tipo.value==='entrega'?cli.end+' – '+cli.bairro:'',ref:f.tipo.value==='entrega'?cli.ref:'',
+  quando:f.quando.value,data:f.quando.value==='agendado'?v('#cData'):'',hora:f.quando.value==='agendado'?v('#cHora'):'',
+  pag:f.pag.value,troco:f.pag.value==='Dinheiro'?v('#cTroco'):'',obs:v('#cObs'),
+  itens:cart.map(x=>{const p=prod(x.k);return{k:p.k,n:p.n,p:priceOf(p),q:x.q,obs:x.obs}}),total:sub()};
+ try{await store.saveOrder(o)}catch(e){}
+ track('Purchase',{value:o.total,currency:'BRL'});cart=[];saveCart();showDone(o)}
+function waText(o,forStore=true){const L=[`*Pedido #${o.num} · Bianca Abreu Confeitaria*`,'',...o.itens.map(i=>`${i.q}x ${i.n} — ${brl(i.p*i.q)}${i.obs?`\n   _${i.obs}_`:''}`),'',`*Total: ${brl(o.total)}*`,`Pagamento: ${o.pag}${o.troco?` (troco p/ ${o.troco})`:''}`,
+ o.tipo==='entrega'?`Entrega: ${o.endereco}${o.ref?` (ref.: ${o.ref})`:''}`:'Retirada na loja',o.quando==='agendado'?`Agendado: ${fmtD(o.data)} às ${o.hora}`:'Para: o quanto antes',o.obs?`Obs.: ${o.obs}`:'','',`Cliente: ${o.cliente.nome} · ${o.cliente.tel}`];
+ return L.filter((x,i,a)=>x!==''||a[i-1]!=='').join('\n')}
+const fmtD=d=>d?d.split('-').reverse().join('/'):'';
+function showDone(o){$('#cart').dataset.step='done';$('#cartTitle').textContent='Pedido enviado';
+ $('#cartBody').innerHTML=`<div class="done"><div class="ok">✓</div><h2 style="font-size:30px">Pedido #${o.num} recebido!</h2><p class="mute">A loja já está vendo o seu pedido. Envie também pelo WhatsApp para confirmar.</p></div>${o.pag==='Pix'?pixBlock(o):''}<div style="margin-top:16px">${receipt(o,80)}</div>`;mountPix();
+ $('#cartFoot').innerHTML=`<a class="btn" style="width:100%;background:#1f9e57" href="https://wa.me/${PHONE}?text=${encodeURIComponent(waText(o))}" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Confirmar no WhatsApp</a><p class="note" style="text-align:center">WhatsApp da loja: (99) 98120-7545</p>`}
+
+/* ---------- Pix copia e cola ---------- */
+const emv=(id,v)=>id+String(v.length).padStart(2,'0')+v;
+const crc16=str=>{let c=0xFFFF;for(let i=0;i<str.length;i++){c^=str.charCodeAt(i)<<8;for(let j=0;j<8;j++)c=(c&0x8000)?((c<<1)^0x1021)&0xFFFF:(c<<1)&0xFFFF}return c.toString(16).toUpperCase().padStart(4,'0')};
+const clean=t=>String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Za-z0-9 ]/g,'').toUpperCase();
+function pixPayload(valor,txid){const k=cfg.pix||{};if(!k.chave)return'';const mai=emv('00','br.gov.bcb.pix')+emv('01',k.chave);
+ let p=emv('00','01')+emv('26',mai)+emv('52','0000')+emv('53','986')+emv('54',(+valor).toFixed(2))+emv('58','BR')+emv('59',clean(k.nome||'BIANCA ABREU').slice(0,25))+emv('60',clean(k.cidade||'CODO').slice(0,15))+emv('62',emv('05',clean(txid).replace(/ /g,'').slice(0,25)||'***'));
+ p+='6304';return p+crc16(p)}
+function pixBlock(o){const code=pixPayload(o.total,'PED'+o.num);if(!code)return`<div class="pix"><b>Pagamento via Pix</b><p class="note">A loja envia a chave Pix pelo WhatsApp ao confirmar o pedido.</p></div>`;
+ return`<div class="pix"><b>Pague com Pix · ${brl(o.total)}</b><div id="qr"></div><textarea class="in" readonly id="pixCode">${esc(code)}</textarea><button class="btn sm" id="copyPix" style="margin-top:10px">Copiar código Pix</button><p class="note">Depois de pagar, envie o comprovante pelo WhatsApp.</p></div>`}
+function mountPix(){const c=$('#pixCode');if(!c)return;const box=$('#qr');try{if(window.QRCode){new QRCode(box,{text:c.value,width:180,height:180,correctLevel:QRCode.CorrectLevel.M})}}catch(e){}
+ $('#copyPix').onclick=()=>navigator.clipboard?.writeText(c.value).then(()=>toast('Código Pix copiado'),()=>{c.select();toast('Selecione e copie o código')})}
+
+/* ---------- métricas de marketing ---------- */
+function loadPixels(){const px=cfg.px||{};const add=(src,cb)=>{const s=document.createElement('script');s.async=true;s.src=src;if(cb)s.onload=cb;document.head.appendChild(s)};
+ try{if(px.meta&&!window.fbq){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window,document);add('https://connect.facebook.net/en_US/fbevents.js');fbq('init',px.meta);fbq('track','PageView')}
+ if((px.ga4||px.ads)&&!window.gtag){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());add('https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(px.ga4||px.ads));if(px.ga4)gtag('config',px.ga4);if(px.ads)gtag('config',px.ads)}
+ if(px.tiktok&&!window.ttq){window.ttq=window.ttq||[];['page','track'].forEach(m=>ttq[m]=ttq[m]||function(){ttq.push([m,...arguments])});add('https://analytics.tiktok.com/i18n/pixel/events.js?sdkid='+encodeURIComponent(px.tiktok));ttq.page()}}catch(e){}}
+function track(ev,data){try{if(window.fbq)fbq('track',ev,data);if(window.gtag)gtag('event',ev==='Purchase'?'purchase':ev==='AddToCart'?'add_to_cart':ev,{value:data?.value,currency:'BRL'});if(window.ttq)ttq.track(ev==='Purchase'?'CompletePayment':ev,data)}catch(e){}}
+
+/* ---------- comprovante térmico ---------- */
+function receipt(o,w){const d=new Date(o.criado);return`<div class="rcpt${w==58?' w58':''}"><div class="c"><h4>BIANCA ABREU</h4>CONFEITARIA ARTESANAL<br>Av. Augusto Teixeira, 2556<br>Codó - MA · (99) 98120-7545</div><hr>
+ <div class="r big"><span>PEDIDO #${esc(o.num)}</span><span>${esc(o.tipo==='entrega'?'DELIVERY':'RETIRADA')}</span></div><div>${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}</div>
+ ${o.quando==='agendado'?`<div class="big">AGENDADO: ${esc(fmtD(o.data))} ${esc(o.hora)}</div>`:''}<hr>
+ ${o.itens.map(i=>`<div class="r"><span>${esc(i.q)}x ${esc(i.n)}</span><span>${brl(i.p*i.q)}</span></div>${i.obs?`<div>  &gt; ${esc(i.obs)}</div>`:''}`).join('')}<hr>
+ <div class="r big"><span>TOTAL</span><span>${brl(o.total)}</span></div><div class="r"><span>Pagamento</span><span>${esc(o.pag)}</span></div>${o.troco?`<div class="r"><span>Troco para</span><span>${esc(o.troco)}</span></div>`:''}<hr>
+ <div><b>Cliente:</b> ${esc(o.cliente?.nome)}</div><div><b>Tel:</b> ${esc(o.cliente?.tel)}</div>${o.tipo==='entrega'?`<div><b>End.:</b> ${esc(o.endereco)}</div>${o.ref?`<div><b>Ref.:</b> ${esc(o.ref)}</div>`:''}`:''}${o.obs?`<div><b>Obs.:</b> ${esc(o.obs)}</div>`:''}
+ <hr><div class="c">Com sabor e amor em cada mordida<br>@biancaabreuconfeitaria</div></div>`}
+let dl=null;(async()=>{try{dl=await window.claude?.use?.('downloads')}catch(e){}})();
+function printOrder(o){$('#printArea').innerHTML=receipt(o,cfg.largura);let ok=false;try{window.print();ok=true}catch(e){}
+ if(!ok)toast('Impressão bloqueada nesta prévia. Use “Baixar” e imprima o arquivo.')}
+function receiptFile(o){const w=cfg.largura==58?'58mm':'80mm';return`<!DOCTYPE html><html lang="pt-BR"><meta charset="utf-8"><title>Pedido ${o.num}</title><style>@page{size:${w} auto;margin:0}body{margin:0;width:${w}}.rcpt{font:13px/1.45 'Courier New',monospace;padding:10px;color:#000}.c{text-align:center}hr{border:0;border-top:1px dashed #000;margin:6px 0}.r{display:flex;justify-content:space-between}.big{font-weight:700;font-size:15px}h4{margin:0;font-size:16px}</style><body onload="print()">${receipt(o,cfg.largura).replace('class="rcpt','class="rcpt x')}</body></html>`}
+async function saveFile(name,data,type){if(dl){try{await dl.save({filename:name,data});return true}catch(e){toast('Download cancelado');return false}}
+ try{const u=URL.createObjectURL(new Blob([data],{type:type||'text/plain'}));const x=document.createElement('a');x.href=u;x.download=name;document.body.appendChild(x);x.click();setTimeout(()=>{URL.revokeObjectURL(u);x.remove()},1500);return true}catch(e){return false}}
+async function downloadReceipt(o){if(await saveFile(`pedido-${o.num}.html`,receiptFile(o),'text/html'))toast('Comprovante baixado');else navigator.clipboard?.writeText(waText(o)).then(()=>toast('Comprovante copiado em texto'),()=>toast('Não foi possível baixar aqui'))}
+
+/* ---------- painel (módulo painel.js) ---------- */
+function renderPanel(r){if(window.BAPanel)window.BAPanel.render(r)}
+function ding(){if(window.BAPanel)window.BAPanel.ding()}
+
+function statusUI(){const st=$('#stTop'),h=horario(),ab=lojaAberta();st.classList.toggle('off',!ab);st.querySelector('span').textContent=cfg.aberto?h.txt:'Pedidos pausados';
+ $('#openMsg').textContent=ab?'Entrega grátis a partir de R$ 30 · retirada na loja':'Estamos fechados agora. Você já pode agendar sua encomenda.';
+ const dw=new Date().getDay();$('#hours').innerHTML=HOR.map((x,i)=>`<tr class="${i===dw?'today':''}"><td>${x[0]}</td><td>${x[1]?x[1]+' – '+x[2]:'Fechado'}</td></tr>`).join('')}
+function applyCfg(){statusUI();hydrate();
+ renderShow();renderMenu();updFab();if(location.hash==='#painel')renderPanel('cfg')}
+
+/* ---------- fotos ---------- */
+const SLOTS=[['logo','Logo'],['bianca1','Bianca (topo do site)'],['bianca5','Bianca (seção Sobre)'],['bianca2','Bianca (galeria 1)'],['bianca4','Bianca (galeria 2)'],['bianca6','Bianca (galeria 3)'],...P.map(p=>[p.k,p.n])];
+function refreshImgs(){applyCfg();if(location.hash==='#painel')renderPanel('fotos')}
+function renderFotos(){$('#fgrid').innerHTML=SLOTS.map(([k,n])=>`<div class="fslot"><div class="media">${img(k,n)}</div><div class="t">${esc(n)}</div><label>Trocar foto<input type="file" accept="image/*" data-slot="${k}"></label></div>`).join('')}
+const toBlob=(file,max=1200)=>new Promise((res,rej)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{const r=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.round(im.width*r);c.height=Math.round(im.height*r);c.getContext('2d').drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);c.toBlob(b=>b?res(b):rej(),'image/webp',.86)};im.onerror=rej;im.src=u});
+const blobToData=b=>new Promise(r=>{const f=new FileReader();f.onload=()=>r(f.result);f.readAsDataURL(b)});
+async function putFoto(k,blob){let v;if(assets){const a=await assets.upload(blob);v=a.id}else{v=await blobToData(await toBlob(blob,700))}fotos={...fotos,[k]:v}}
+async function saveFotos(){ls.set('fotos',fotos);if(dbOk){try{await db.doc('config/fotos').set(fotos)}catch(e){}}refreshImgs()}
+$('#v-painel').addEventListener('change',async e=>{const t=e.target;
+ if(t.dataset.slot&&t.files[0]){toast('Enviando foto…');try{await putFoto(t.dataset.slot,await toBlob(t.files[0]));await saveFotos();toast('Foto atualizada')}catch(err){toast('Não foi possível enviar esta foto')}}
+ if(t.id==='fPack'&&t.files[0]){const msg=$('#fMsg');try{const data=JSON.parse(await t.files[0].text());const ks=Object.keys(data).filter(k=>typeof data[k]==='string'&&data[k].startsWith('data:image/'));let n=0;
+  for(const k of ks){msg.textContent=`Enviando ${++n} de ${ks.length}…`;const [h,d]=data[k].split(',');const bin=atob(d);const u8=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u8[i]=bin.charCodeAt(i);const b=new Blob([u8],{type:h.slice(5).split(';')[0]});await putFoto(k,await toBlob(b))}
+  await saveFotos();msg.textContent=`${ks.length} fotos importadas.`}catch(err){msg.textContent='Não consegui ler esse arquivo. Confira se é o bianca_imagens.json.'}}});
+
+/* ---------- animação de entrada ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('shown');io.unobserve(e.target)}}),{threshold:.12});
+$$('.reveal').forEach(e=>io.observe(e));
+
+addEventListener('scroll',()=>$('header').classList.toggle('sc',scrollY>8),{passive:true});
+
+window.BA={get orders(){return orders},get cfg(){return cfg},get db(){return db},get dbOk(){return dbOk},get dl(){return dl},P,CATS,BAIRROS,store,ls,esc,brl,img,src,toast,receipt,printOrder,downloadReceipt,saveFile,waText,pixPayload,priceOf,descOf,isOut,fmtD,renderFotos};
+applyCfg();saveCart();route();loadPixels();setInterval(statusUI,60000);
+}
+</script>
+<script src="painel.js"></script>
+</body>
+</html>
