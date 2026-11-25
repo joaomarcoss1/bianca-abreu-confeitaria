@@ -6,6 +6,8 @@
 <title>Bianca Abreu Confeitaria</title>
 <meta name="description" content="Confeitaria artesanal em Codó - MA. Bolos vulcão, copos da felicidade, fatias supreme e bombons. Peça online com retirada na loja ou delivery, entrega grátis a partir de R$ 30.">
 <meta name="theme-color" content="#f4bfcb">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bianca Abreu Confeitaria · Codó - MA">
 <meta property="og:description" content="Com sabor e amor em cada mordida. Peça online: retirada na loja ou delivery em 33 bairros de Codó.">
@@ -21,12 +23,12 @@
    PICTURE: bolo vulcão em moldura arqueada, docinhos flutuando, selo girando
    COLOUR and TYPE: rosa da marca dominante, cacau de apoio, morango como acento; Fraunces + Manrope, script só na assinatura
    LAYOUT: três telas (início, cardápio, painel) navegadas por #hash, faixas de cor de ponta a ponta */
-:root{color-scheme:light dark;
+:root{color-scheme:only light;
 --bg:light-dark(#fff9f7,#1d120d);--card:light-dark(#ffffff,#2a1b14);--soft:light-dark(#fdebef,#33211a);
 --rose:light-dark(#f4bfcb,#4a2c2b);--rose2:light-dark(#eaa3b4,#6b3c40);--ink:light-dark(#3a2418,#fbe7ec);--mute:light-dark(#735446,#d2b6ae);
 --cocoa:#5b3a26;--btn:light-dark(#5b3a26,#f4bfcb);--btnInk:light-dark(#fff4f6,#2a1712);--red:light-dark(#b3123a,#ff7f97);--cocoa2:#3a2418;--on:#fff4f6;--berry:light-dark(#b3123a,#ff7f97);--line:light-dark(#efdcd6,#3e2a22);--ok:#2f8f5b;
 --sh:0 18px 40px -22px rgba(58,36,24,.45);--r:22px}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+:root,:root[data-theme=light],:root[data-theme=dark]{color-scheme:only light}
 *{box-sizing:border-box;min-width:0}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Manrope,system-ui,sans-serif;overflow-x:clip}
